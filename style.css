@@ -50,9 +50,20 @@ a {
 	display: flex;
 	flex-direction: column;
 	list-style: none;
+	align-items: end;
 	gap: 1rem;
 	font-family: var(--section-title-font);
 	letter-spacing: 0.1rem;
+	transition: all 2s;
+	content-visibility: hidden;
+}
+
+nav {
+	text-align: end;
+}
+
+header .hamburger {
+	padding: 2rem 0 2rem 0;
 }
 
 .menu li a,
@@ -72,12 +83,16 @@ header h1,
 	visibility: hidden;
 }
 
+.logo {
+	height: 5rem;
+}
+
 header {
 	padding: 1.5rem;
 	background: var(--second-color);
-	background-position: center;
-	background-size: cover;
-	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 header h1 {
@@ -243,6 +258,16 @@ header h1 {
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-evenly;
+		content-visibility: visible;
+	}
+
+	header {
+		flex-direction: column;
+	}
+
+	header .hamburger{
+		content-visibility: hidden;
+		position: absolute;
 	}
 
 	.profile {

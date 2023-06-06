@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portfolio</title>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="hamburgers.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -36,8 +37,13 @@
 	</head>
 	<body>
 		<header>
-			<h1 id="top-title">Ann Lee</h1>
+			<img class="logo" id="top-title" src="logo.png" />
 			<nav>
+				<button class="hamburger hamburger--collapse" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
 				<ul class="menu">
 					<li>
 						<a href="#profile">ABOUT ME</a>
@@ -45,7 +51,7 @@
 					<li>
 						<a href="#appointment">APPOINTMENT</a>
 					</li>
-					<li id="mid-title"><h1>Ann Lee</h1></li>
+					<img class="logo" id="mid-title" src="logo.png" />
 					<li>
 						<a href="#my-work">MY WORK</a>
 					</li>

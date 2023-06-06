@@ -1,0 +1,290 @@
+:root {
+	--first-color: #feafaf;
+	--second-color: #f1f1f1;
+	--third-color: #40a798;
+	--fourth-color: #212f27;
+
+	--title-font: "Dancing Script", cursive;
+	--section-title-font: "Cormorant Garamond", serif;
+	--p-font: "Nunito", sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	font-family: var(--title-font);
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-family: var(--section-title-font);
+	font-weight: lighter;
+	font-size: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+p {
+	font-size: 0.8rem;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	gap: 1rem;
+	font-family: var(--section-title-font);
+	letter-spacing: 0.1rem;
+}
+
+.menu li a,
+header h1,
+.profile button a,
+.my-work,
+.contact {
+	color: var(--fourth-color);
+}
+
+.menu li a:hover {
+	color: var(--first-color);
+}
+
+#mid-title {
+	position: absolute;
+	visibility: hidden;
+}
+
+header {
+	padding: 1.5rem;
+	background: var(--second-color);
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+}
+
+header h1 {
+	padding-top: 0;
+}
+
+.profile {
+	background: var(--fourth-color);
+}
+
+.profile p,
+.img-gallery,
+.profile button {
+	font-family: var(--p-font);
+}
+
+.profile {
+	padding: 2rem;
+	color: var(--second-color);
+	text-align: center;
+}
+
+.profile-pic {
+	display: block;
+	height: 17rem;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	z-index: 2;
+}
+
+.profile h2 {
+	max-width: 15rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.profile p {
+	max-width: 20rem;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.8;
+}
+
+.profile h3 {
+	opacity: 0.8;
+	font-family: var(--title-font);
+	font-weight: lighter;
+}
+
+.profile button {
+	background: var(--first-color);
+	border: none;
+	padding: 0.5rem 1rem;
+	margin: 1rem;
+	border-radius: 0.2rem;
+	transition: 0.4s;
+}
+
+.profile button:hover {
+	background: var(--second-color);
+	cursor: pointer;
+}
+
+.line {
+	position: absolute;
+	height: 20rem;
+	left: -80px;
+	top: -25px;
+	z-index: 0;
+	opacity: 0.6;
+}
+
+.pic-box {
+	position: relative;
+	width: fit-content;
+	margin: auto;
+}
+
+.my-work {
+	background: var(--second-color);
+	padding: 2rem;
+	text-align: center;
+}
+
+.my-work img {
+	width: 15rem;
+	object-fit: cover;
+}
+
+.img-gallery {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
+}
+
+.appointment {
+	padding: 2rem;
+	color: black;
+	font-family: var(--p-font);
+	background: rgb(228, 206, 177);
+	text-align: center;
+}
+
+.appointment p {
+	letter-spacing: 0.1rem;
+}
+
+.appointment button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0.5rem 1.5rem;
+	border: none;
+	border-radius: 0.2rem;
+	letter-spacing: 0.1rem;
+	background: var(--fourth-color);
+	/* background: #86a293; */
+	color: white;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	transition: 0.4s;
+}
+
+.appointment button:hover {
+	background: var(--third-color);
+	cursor: pointer;
+}
+
+.straight-line {
+	height: 1px;
+	background: rgba(0, 0, 0, 0.404);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin: auto;
+}
+
+.contact {
+	padding: 2rem;
+	text-align: center;
+}
+
+.contact ul {
+	padding: 1rem 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+@media screen and (min-width: 768px) {
+	#top-title {
+		position: absolute;
+		visibility: hidden;
+	}
+
+	#mid-title {
+		position: static;
+		visibility: visible;
+	}
+
+	.menu {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+
+	.profile {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.pic-box {
+		margin: 0;
+	}
+
+	.straight-line {
+		width: 60%;
+	}
+
+	.img-gallery {
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	p {
+		font-size: 1rem;
+	}
+
+	.profile-pic {
+		height: 20rem;
+		object-fit: contain;
+	}
+
+	.line {
+		height: 22rem;
+	}
+
+	.img-gallery {
+		grid-template-columns: auto auto auto;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.my-work img {
+		width: 20rem;
+	}
+}

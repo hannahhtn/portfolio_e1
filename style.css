@@ -47,7 +47,7 @@ a {
 }
 
 .menu {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	list-style: none;
 	align-items: end;
@@ -55,7 +55,6 @@ a {
 	font-family: var(--section-title-font);
 	letter-spacing: 0.1rem;
 	transition: all 2s;
-	content-visibility: hidden;
 }
 
 nav {
@@ -250,10 +249,10 @@ header h1 {
 	}
 
 	.menu {
+		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-evenly;
-		content-visibility: visible;
 	}
 
 	header {

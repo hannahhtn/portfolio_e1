@@ -9,10 +9,10 @@ hamburger.addEventListener("click", function () {
 	// Do something else, like open/close menu
 
 	setTimeout(() => {
-		if (menu.style.contentVisibility === "") {
-			menu.style.contentVisibility = "visible";
+		if (menu.style.display === "") {
+			menu.style.display = "flex";
 		} else {
-			menu.style.contentVisibility = "";
+			menu.style.display = "";
 		}
 	}, 200);
 });
